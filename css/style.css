@@ -261,30 +261,29 @@ body {
 /* Ảnh bị quá to, không chịu vừa khít với grid. Không hiểu tại sao =>Tốn khá nhiều thời gian để tìm hiểu cách cho ảnh vừa với grid. 
 Vẫn không hiểu vì sao ảnh bị như vậy. Nếu cài đặt kích thước sẵn trong html hoặc css thì oke, nhưng chắc là có cách khá hiệu quả hơn đối với hiển thị trên mobile*/
 .certificate .container {
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, auto);
-  row-gap: 40px;
   justify-content: center;
   align-items: start;
   padding: 30px 70px;
 }
-.certificate img {
+/* .certificate img {
   max-width: 100%;
   min-width: 0px;
   height: auto;
-}
-.certificate .content-title {
+} */
+
+/* ASM03 Tập sử dụng bootsrap cho phần này nên tắt đi */
+/* .certificate .content-title {
   grid-column: 1/-1;
   padding: 0;
   margin: 0;
-}
-.certificate .content-list {
+} */
+/* .certificate .content-list {
   display: grid;
   grid-template-columns: 1fr 2fr;
   justify-content: space-between;
-}
+} */
 /* Kẻ border , dàn grid dưới để kẻ border cho hết chiều rộng*/
-.certificate .content-list:nth-child(2) {
+/* .certificate .content-list:nth-child(2) {
   border-right: 2px solid #d6c08d;
 }
 .certificate .content-list:nth-child(4) {
@@ -292,30 +291,30 @@ Vẫn không hiểu vì sao ảnh bị như vậy. Nếu cài đặt kích thư�
   grid-column: 1/-1;
   grid-template-columns: 1fr 5fr;
   padding-top: 40px;
-}
-.certificate .list-title {
+} */
+/* .certificate .list-title {
   font-weight: bold;
   text-transform: uppercase;
-}
+} */
 /* Đặt khối chứa hình ảnh vào grid cột đầu tiên kéo dài 5 hàng */
-.certificate .list-img {
+/* .certificate .list-img {
   grid-column: 1/2;
   grid-row: 1/6;
-}
+} */
 /* KHối nội dung thì cho từ cột 2 đến hết */
-.certificate .content-list li {
+/* .certificate .content-list li {
   grid-column: 2/-1;
   padding-left: 10px;
-}
+} */
 
 /* -----------PROJECT - DỰ ÁN----------*/
 /* Chia khối dự án ra 3 cột 2 dòng */
 .project .container {
-  gap: 30px;
-  grid-template-columns: repeat(3, max(390px));
+  gap: 5%;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   justify-content: center;
-  padding: 30px 70px;
+  padding: 5%;
   border-bottom: 1px solid #8080804e;
 }
 /* Cho vừa ảnh vào grid */
@@ -347,9 +346,6 @@ Vẫn không hiểu vì sao ảnh bị như vậy. Nếu cài đặt kích thư�
 }
 /* KHối 3 phần tử dưới tên dự án, cho thành flex và căn chỉnh */
 .project .list-sub-title {
-  display: inline-flex;
-  gap: 30px;
-  padding: 20px;
   border: 1px solid #8080804e;
 }
 .project .list-sub-title i {
@@ -357,11 +353,9 @@ Vẫn không hiểu vì sao ảnh bị như vậy. Nếu cài đặt kích thư�
 }
 /* Tô màu và bo viền cho số năm */
 .project .list-sub-title .project-year {
-  padding: 2px 20px;
   background-color: #199cdb;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   color: #f7f7f7;
-  align-self: center;
 }
 /* Khối Mô tả , nhiệm vụ, công nghệ, vì chia ra nhiều khối nhỏ nên tô viền xong sẽ cần xóa bớt */
 .project .container .list-details {
