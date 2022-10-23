@@ -263,7 +263,7 @@ Vẫn không hiểu vì sao ảnh bị như vậy. Nếu cài đặt kích thư�
 .certificate .container {
   justify-content: center;
   align-items: start;
-  padding: 30px 70px;
+/*   padding: 30px 70px; */
 }
 /* .certificate img {
   max-width: 100%;
